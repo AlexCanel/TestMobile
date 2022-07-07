@@ -1,21 +1,21 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/OrganizandoTarefas.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/MudarPosicao.feature");
 formatter.feature({
-  "name": "organizando uma lista de tarefa",
+  "name": "mudando a posicao de uma nota",
   "description": "",
   "keyword": "Funcionalidade",
   "tags": [
     {
-      "name": "@organizarlista"
+      "name": "@mudarposicao"
     }
   ]
 });
 formatter.scenario({
-  "name": "organizando a lista",
+  "name": "mudando posicao",
   "description": "",
   "keyword": "Cenario",
   "tags": [
     {
-      "name": "@organizarlista"
+      "name": "@mudarposicao"
     }
   ]
 });
@@ -23,48 +23,8 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "em opcao",
-  "keyword": "Quando "
-});
-formatter.match({
-  "location": "OrganizandoTarefasSteps.emOpcao()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "clicar em adicionar categoria",
-  "keyword": "E "
-});
-formatter.match({
-  "location": "OrganizandoTarefasSteps.clicarEmAdicionarCategoria()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "criar uma categoria \"Nomes\"",
-  "keyword": "E "
-});
-formatter.match({
-  "location": "OrganizandoTarefasSteps.criarUmaCategoria(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "clicar em voltar",
-  "keyword": "E "
-});
-formatter.match({
-  "location": "OrganizandoTarefasSteps.clicarEmVoltar()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
   "name": "eu criar uma lista \"Alex\"",
-  "keyword": "E "
+  "keyword": "Quando "
 });
 formatter.match({
   "location": "CriandoTaferasSteps.euCriarUmaLista(String)"
@@ -103,35 +63,24 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "clicar em categorias",
+  "name": "clicar e manter em uma nota em seguida arrastar",
   "keyword": "E "
 });
 formatter.match({
-  "location": "OrganizandoTarefasSteps.clicarEmCategorias()"
+  "location": "MudarPosicaoSteps.clicarEManterEmUmaNotaEmSeguidaArrastar()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "e escolher uma categoria e clicar",
-  "keyword": "E "
-});
-formatter.match({
-  "location": "OrganizandoTarefasSteps.eEscolherUmaCategoriaEClicar()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "sua nota estara em uma categoria",
+  "name": "sera modificada a posicao das notas",
   "keyword": "Entao "
 });
 formatter.match({
-  "location": "OrganizandoTarefasSteps.suaNotaEstaraEmUmaCategoria()"
+  "location": "MudarPosicaoSteps.seraModificadaAPosicaoDasNotas()"
 });
 formatter.result({
-  "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat stepsDefinitions.OrganizandoTarefasSteps.suaNotaEstaraEmUmaCategoria(OrganizandoTarefasSteps.java:51)\r\n\tat ✽.sua nota estara em uma categoria(file:src/test/resources/features/OrganizandoTarefas.feature:19)\r\n",
-  "status": "pending"
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"

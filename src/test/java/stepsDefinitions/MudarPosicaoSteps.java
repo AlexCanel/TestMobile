@@ -15,15 +15,13 @@ public class MudarPosicaoSteps {
 	
 	
 	@Quando("clicar e manter em uma nota em seguida arrastar")
-	public void clicarEManterEmUmaNotaEmSeguidaArrastar() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+	public void clicarEManterEmUmaNotaEmSeguidaArrastar() throws InterruptedException {
+		notasPage.mudarPosicao();
 	}
 
 	@Entao("sera modificada a posicao das notas")
-	public void seraModificadaAPosicaoDasNotas() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+	public void seraModificadaAPosicaoDasNotas() throws InterruptedException {
+		
 	}
 
 

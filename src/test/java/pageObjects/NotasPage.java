@@ -1,5 +1,7 @@
 package pageObjects;
 
+import static utils.Utils.swipeBaixo;
+
 import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.AppiumDriver;
@@ -55,8 +57,6 @@ public class NotasPage {
 	@AndroidFindBy(id = "notizen.basic.notes.notas.note.notepad:id/txtCategory")
 	public MobileElement botaoEscolherCategoria;
 	
-	
-
 	
 	public void teclaAddItenCheckList() throws InterruptedException {
 		teclaAddItenCheckList.click();
@@ -116,6 +116,12 @@ public class NotasPage {
 		botaoEscolherCategoria.click();
 	}
 	
+	public void mudarPosicao() throws InterruptedException {
+		swipeBaixo();
+	}
+	
+	
+
 	
 	public void criarNota(String tituloItenChackList) {
 		teclaAddItenCheckList.click();

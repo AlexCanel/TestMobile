@@ -1,6 +1,6 @@
 package stepsDefinitions;
 
-import static utils.Utils.acessarBloco;
+import static utils.Utils.*;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -17,8 +17,7 @@ public class Hooks {
 
 	@After
 	public void tearDown() {
-		//driver.quit();
-		
+		driver.quit();	
 	}
 
 }
