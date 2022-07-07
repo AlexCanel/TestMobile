@@ -1,166 +1,136 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/CriandoTarefas.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/OrganizandoTarefas.feature");
 formatter.feature({
-  "name": "Criando lista no basic note mobile",
+  "name": "organizando uma lista de tarefa",
   "description": "",
-  "keyword": "Funcionalidade"
+  "keyword": "Funcionalidade",
+  "tags": [
+    {
+      "name": "@organizarlista"
+    }
+  ]
 });
 formatter.scenario({
-  "name": "Criando a lista",
+  "name": "organizando a lista",
   "description": "",
-  "keyword": "Cenario"
+  "keyword": "Cenario",
+  "tags": [
+    {
+      "name": "@organizarlista"
+    }
+  ]
 });
 formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "eu clicar em adicionar",
+  "name": "em opcao",
   "keyword": "Quando "
 });
 formatter.match({
-  "location": "CriandoTaferasSteps.euClicarEmAdicionar()"
+  "location": "OrganizandoTarefasSteps.emOpcao()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "clicar em checklist",
+  "name": "clicar em adicionar categoria",
   "keyword": "E "
 });
 formatter.match({
-  "location": "CriandoTaferasSteps.clicarEmChecklist()"
+  "location": "OrganizandoTarefasSteps.clicarEmAdicionarCategoria()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "digitar no nome da checklist \"Tarefas\"",
+  "name": "criar uma categoria \"Nomes\"",
   "keyword": "E "
 });
 formatter.match({
-  "location": "CriandoTaferasSteps.digitarNoNomeDaChecklist(String)"
+  "location": "OrganizandoTarefasSteps.criarUmaCategoria(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "eu clicar em salvar nome da checklist",
+  "name": "clicar em voltar",
   "keyword": "E "
 });
 formatter.match({
-  "location": "CriandoTaferasSteps.euClicarEmSalvarNomeDaChecklist()"
+  "location": "OrganizandoTarefasSteps.clicarEmVoltar()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "eu clicar em adicionar uma tarefa da checklist",
+  "name": "eu criar uma lista \"Alex\"",
   "keyword": "E "
 });
 formatter.match({
-  "location": "CriandoTaferasSteps.euClicarEmAdicionarUmaTarefaDaChecklist()"
+  "location": "CriandoTaferasSteps.euCriarUmaLista(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "digitar o nome da tarefa \"comer\"",
+  "name": "eu criar uma tarefa \"Correr\"",
   "keyword": "E "
 });
 formatter.match({
-  "location": "CriandoTaferasSteps.digitarONomeDaTarefa(String)"
+  "location": "CriandoTaferasSteps.euCriarUmaTarefa(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "eu clicar em salvar nome tarefa",
+  "name": "eu criar uma tarefa \"Pular\"",
   "keyword": "E "
 });
 formatter.match({
-  "location": "CriandoTaferasSteps.euClicarEmSalvarNomeTarefa()"
+  "location": "CriandoTaferasSteps.euCriarUmaTarefa(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "eu clicar em adicionar uma tarefa da checklist",
+  "name": "eu criar uma tarefa \"Andar\"",
   "keyword": "E "
 });
 formatter.match({
-  "location": "CriandoTaferasSteps.euClicarEmAdicionarUmaTarefaDaChecklist()"
+  "location": "CriandoTaferasSteps.euCriarUmaTarefa(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "digitar o nome da tarefa \"Beber\"",
+  "name": "clicar em categorias",
   "keyword": "E "
 });
 formatter.match({
-  "location": "CriandoTaferasSteps.digitarONomeDaTarefa(String)"
+  "location": "OrganizandoTarefasSteps.clicarEmCategorias()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "eu clicar em salvar nome tarefa",
+  "name": "e escolher uma categoria e clicar",
   "keyword": "E "
 });
 formatter.match({
-  "location": "CriandoTaferasSteps.euClicarEmSalvarNomeTarefa()"
+  "location": "OrganizandoTarefasSteps.eEscolherUmaCategoriaEClicar()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "eu clicar em adicionar uma tarefa da checklist",
-  "keyword": "E "
-});
-formatter.match({
-  "location": "CriandoTaferasSteps.euClicarEmAdicionarUmaTarefaDaChecklist()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "digitar o nome da tarefa \"Dormir\"",
-  "keyword": "E "
-});
-formatter.match({
-  "location": "CriandoTaferasSteps.digitarONomeDaTarefa(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "eu clicar em salvar nome tarefa",
-  "keyword": "E "
-});
-formatter.match({
-  "location": "CriandoTaferasSteps.euClicarEmSalvarNomeTarefa()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "eu clicar em item concluido",
-  "keyword": "E "
-});
-formatter.match({
-  "location": "CriandoTaferasSteps.euClicarEmItemConcluido()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "as tarefas estarao checadas",
+  "name": "sua nota estara em uma categoria",
   "keyword": "Entao "
 });
 formatter.match({
-  "location": "CriandoTaferasSteps.asTarefasEstaraoChecadas()"
+  "location": "OrganizandoTarefasSteps.suaNotaEstaraEmUmaCategoria()"
 });
 formatter.result({
-  "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat stepsDefinitions.CriandoTaferasSteps.asTarefasEstaraoChecadas(CriandoTaferasSteps.java:57)\r\n\tat ✽.as tarefas estarao checadas(file:src/test/resources/features/CriandoTarefas.feature:23)\r\n",
+  "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat stepsDefinitions.OrganizandoTarefasSteps.suaNotaEstaraEmUmaCategoria(OrganizandoTarefasSteps.java:51)\r\n\tat ✽.sua nota estara em uma categoria(file:src/test/resources/features/OrganizandoTarefas.feature:19)\r\n",
   "status": "pending"
 });
 formatter.after({

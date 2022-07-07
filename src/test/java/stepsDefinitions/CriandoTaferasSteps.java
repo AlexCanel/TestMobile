@@ -1,63 +1,40 @@
 package stepsDefinitions;
 
+import static org.junit.Assert.assertEquals;
 import static utils.Utils.driver;
+
+import org.openqa.selenium.By;
 
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
-import pageObjects.BlocoPage;
+import pageObjects.NotasPage;
+import pageObjects.TelaInicalPage;
 
 public class CriandoTaferasSteps {
 	
-	BlocoPage blocoPage = new BlocoPage(driver);
+	TelaInicalPage telaInicalPage = new TelaInicalPage (driver);
+	NotasPage notasPage = new NotasPage (driver);
 	
-	@Quando("eu clicar em adicionar")
-	public void euClicarEmAdicionar() throws InterruptedException {
-		blocoPage.teclaAddNota();
+	@Quando("eu criar uma lista {string}")
+	public void euCriarUmaLista(String string) {
+		telaInicalPage.adicionarNota(string);
 	}
-
-	@Quando("clicar em checklist")
-	public void clicarEmChecklist() throws InterruptedException {
-		blocoPage.teclaAddCheckList();
-	}
-
-	@Quando("digitar no nome da checklist {string}")
-	public void digitarNoNomeDaChecklist(String string) throws InterruptedException {
-		blocoPage.tituloCheckList(string);
-	}
-
-	@Quando("eu clicar em salvar nome da checklist")
-	public void euClicarEmSalvarNomeDaChecklist() throws InterruptedException {
-		blocoPage.confirmarTituloCheckList();
-	}
-
-	@Quando("eu clicar em adicionar uma tarefa da checklist")
-	public void euClicarEmAdicionarUmaTarefaDaChecklist() throws InterruptedException {
-		blocoPage.teclaAddItenCheckList();
-	}
-
-	@Quando("digitar o nome da tarefa {string}")
-	public void digitarONomeDaTarefa(String string) throws InterruptedException {
-		blocoPage.tituloItenCheckList(string);
-	}
-
-	@Quando("eu clicar em salvar nome tarefa")
-	public void euClicarEmSalvarNomeTarefa() throws InterruptedException {
-		blocoPage.confirmarTituloItenCheckList();
+	
+	@Quando("eu criar uma tarefa {string}")
+	public void euCriarUmaTarefa(String string) {
+	    notasPage.criarNota(string);
 	}
 
 
 	@Quando("eu clicar em item concluido")
 	public void euClicarEmItemConcluido() throws InterruptedException {
-		blocoPage.clicarChecado();
+		notasPage.clicarChecado();
 	}
 
 	@Entao("as tarefas estarao checadas")
 	public void asTarefasEstaraoChecadas() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+		assertEquals("true", driver.findElement(By.id("notizen.basic.notes.notas.note.notepad:id/imgCheckbox")).getAttribute("checked"));
 	}
-
-
 	
 
 }
