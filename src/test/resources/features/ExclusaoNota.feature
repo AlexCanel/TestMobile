@@ -3,15 +3,15 @@
 
 @exclusaodenotas
 Funcionalidade: excluindo uma nota
-	
-	
-		Cenario: excluir nota 
+		
+		Contexto: criando notas
 			Quando eu criar uma lista "Alex"
 			E eu criar uma tarefa "Correr"
 			E eu criar uma tarefa "Pular"
 			E eu criar uma tarefa "Andar"
-			E eu clicar em item concluido
-			E clicar na lixeira
-			E confirmar a exclusao
+	
+		Cenario: excluir nota 
+			E clicar em excluir
+			E clicar em excluir
 			Entao o item sera excluido
 

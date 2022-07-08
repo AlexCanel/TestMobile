@@ -1,6 +1,9 @@
 package stepsDefinitions;
 
+import static org.junit.Assert.assertEquals;
 import static utils.Utils.driver;
+
+import org.openqa.selenium.By;
 
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
@@ -14,11 +17,11 @@ public class OrganizandoTarefasSteps {
 	CategoriaPage categoriaPage = new CategoriaPage (driver);
 	NotasPage notasPage = new NotasPage (driver);
 	
-	@Quando("em opcao")
-	public void emOpcao() throws InterruptedException {
-	   telaInicalPage.botaoOpcao();
-	}
-
+	@Quando("clicar em categorias")
+	public void clicarEmCategorias() throws InterruptedException {
+	    notasPage.botaoEscolherCategoria();
+	}	
+	
 	@Quando("clicar em adicionar categoria")
 	public void clicarEmAdicionarCategoria() throws InterruptedException {
 	   categoriaPage.clicarAdicionarCategoria();
@@ -35,20 +38,20 @@ public class OrganizandoTarefasSteps {
 		categoriaPage.fecharCategoria();
 	}
 	
-	@Quando("clicar em categorias")
-	public void clicarEmCategorias() throws InterruptedException {
-	    notasPage.botaoEscolherCategoria();
-	}
-
-	@Quando("e escolher uma categoria e clicar")
-	public void eEscolherUmaCategoriaEClicar() throws InterruptedException {
+	@Quando("selecionar uma categoria")
+	public void selecionarUmaCategoria() throws InterruptedException {
 	    categoriaPage.selecionarCategoria();
 	}
 
+
 	@Entao("sua nota estara em uma categoria")
-	public void suaNotaEstaraEmUmaCategoria() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+	public void suaNotaEstaraEmUmaCategoria() throws InterruptedException {
+		Thread.sleep(5000);
+		assertEquals("Nomes",
+				driver.findElement(By.id("notizen.basic.notes.notas.note.notepad:id/txtCategory")).getText());
 	}
 
+	
+	
+	
 }

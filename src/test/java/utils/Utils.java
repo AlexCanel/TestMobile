@@ -38,9 +38,8 @@ public class Utils {
 		TouchAction touch = new TouchAction(driver);
 
 		touch.press(PointOption.point(inicioX, inicioY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(35000)))
-		.moveTo(PointOption.point(fimX, fimY))
-		.release() // liberar o mouse nas cordenadas
-		.perform(); // executa as açoes
+				.moveTo(PointOption.point(fimX, fimY)).release() // liberar o mouse nas cordenadas
+				.perform(); // executa as açoes
 	}
 
 	public static void swipeBaixo() {

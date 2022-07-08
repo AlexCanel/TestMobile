@@ -11,20 +11,19 @@ import pageObjects.NotasPage;
 import pageObjects.TelaInicalPage;
 
 public class CriandoTaferasSteps {
-	
-	TelaInicalPage telaInicalPage = new TelaInicalPage (driver);
-	NotasPage notasPage = new NotasPage (driver);
-	
+
+	TelaInicalPage telaInicalPage = new TelaInicalPage(driver);
+	NotasPage notasPage = new NotasPage(driver);
+
 	@Quando("eu criar uma lista {string}")
 	public void euCriarUmaLista(String string) {
 		telaInicalPage.adicionarNota(string);
 	}
-	
+
 	@Quando("eu criar uma tarefa {string}")
 	public void euCriarUmaTarefa(String string) {
-	    notasPage.criarNota(string);
+		notasPage.criarNota(string);
 	}
-
 
 	@Quando("eu clicar em item concluido")
 	public void euClicarEmItemConcluido() throws InterruptedException {
@@ -33,8 +32,8 @@ public class CriandoTaferasSteps {
 
 	@Entao("as tarefas estarao checadas")
 	public void asTarefasEstaraoChecadas() {
-		assertEquals("true", driver.findElement(By.id("notizen.basic.notes.notas.note.notepad:id/imgCheckbox")).getAttribute("checked"));
+		assertEquals("true", driver.findElement(By.id("notizen.basic.notes.notas.note.notepad:id/imgCheckbox"))
+				.getAttribute("checked"));
 	}
-	
 
 }

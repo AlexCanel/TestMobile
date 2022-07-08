@@ -1,6 +1,9 @@
 package stepsDefinitions;
 
+import static org.junit.Assert.assertEquals;
 import static utils.Utils.*;
+
+import org.openqa.selenium.By;
 
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
@@ -30,10 +33,22 @@ public class SenhaListaSteps {
 	    senhaPage.botaoConfirmarSenha();
 	}
 
-	@Entao("as tarefas estarao com senha")
-	public void asTarefasEstaraoComSenha() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+	@Quando("clicar em retorna ao inicio")
+	public void clicarEmRetornaAoInicio() throws InterruptedException {
+		notasPage.voltarTelaInicial();
 	}
 
+	@Quando("clicar na nota")
+	public void clicarNaNota() throws InterruptedException {
+	    notasPage.clicarNota();
+	}
+
+	@Entao("sera pedido uma senha")
+	public void seraPedidoUmaSenha() throws InterruptedException {
+		Thread.sleep(5000);
+		assertEquals("Password",
+				driver.findElement(By.xpath("//android.widget.RelativeLayout//android.widget.LinearLayout[@index ='1']//android.widget.TextView")).getText());
+	}
+
+	
 }
